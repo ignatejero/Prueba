@@ -12,8 +12,9 @@ require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') }
 
 module.exports = sequelize;*/
 
-const { Sequelize } = require('sequelize');
-require('dotenv').config();
+import { Sequelize } from 'sequelize';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const isUsingSSL = process.env.DB_HOST !== 'localhost' && process.env.DB_HOST !== '127.0.0.1';
 
@@ -24,7 +25,6 @@ const sequelize = new Sequelize({
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  // Solo si el host NO es local, agregamos el bloque de SSL:
   dialectOptions: isUsingSSL
     ? {
         ssl: {
@@ -36,4 +36,5 @@ const sequelize = new Sequelize({
   logging: false
 });
 
-module.exports = sequelize;
+export default sequelize;
+
