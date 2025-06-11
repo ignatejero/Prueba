@@ -48,7 +48,6 @@ let enEjecucion = false;
 async function actualizarEmbalses() {
   console.time("Tiempo de ejecución");
 
-  let volumenTotal = 0;
   let CapacidadTotal = 0;
   let embalsesProcesados = 0;
   const capacidadMaxima = 1060.7;
@@ -57,23 +56,20 @@ async function actualizarEmbalses() {
     try {
       console.log(`📥 Descargando datos para el embalse: ${nombreEmbalse}`);
 
-      const response_hm3 = await axios.get(embalses_hm3[nombreEmbalse], { maxRedirects: 5 });
+      const response_hm3 = await axios.get(embalses_hm3[nombreEmbalse]);
       const capacidad = response_hm3.data.response?.valores?.at(-1)?.valor ?? null;
 
       console.log(`📊 Volumen en hm³ para ${nombreEmbalse}: ${capacidad}`);
 
-      const response_porcentaje = await axios.get(embalses_porcentaje[nombreEmbalse], { maxRedirects: 5 });
+      const response_porcentaje = await axios.get(embalses_porcentaje[nombreEmbalse]);
       const volumen_porcentual = response_porcentaje.data.response?.valores?.at(-1)?.valor ?? null;
 
       console.log(`📊 Volumen porcentual para ${nombreEmbalse}: ${volumen_porcentual}%`);
 
-      if (capacidad !== null && volumen_porcentual !== null) {
-        volumenTotal += capacidad * (volumen_porcentual / 100);
+      if (capacidad !== null && volumen_porcentual !== null && volumen_porcentual > 0) {
         CapacidadTotal += capacidad;
         embalsesProcesados++;
       }
-
-      console.log('Buscando embalse con nombre:', nombreEmbalse);
 
       const embalseEnDb = await Embalse.findOne({ where: { nombre: nombreEmbalse } });
       if (embalseEnDb) {
@@ -90,24 +86,24 @@ async function actualizarEmbalses() {
         console.log(`📜 Historial actualizado para ${nombreEmbalse}.`);
       }
     } catch (error) {
-      console.error(`❌ Error en ${nombreEmbalse}: ${error.message}`);
+      console.error(`❌ Error en ${nombreEmbalse}:`, error.message);
     }
   }
 
   if (embalsesProcesados === 0) {
-    console.warn("⚠️ No se procesó ningún embalse (todos fallaron). No se actualiza resumenembalses.");
+    console.warn("⚠️ No se procesó ningún embalse. Se omite actualización de resumen.");
     return;
   }
 
-  const PorcentajeTotal = CapacidadTotal === 0 ? 0 : (volumenTotal / CapacidadTotal) * 100;
+  const PorcentajeTotal = (CapacidadTotal / capacidadMaxima) * 100;
 
-  console.log(`📊 Volumen total en todos los embalses: ${CapacidadTotal.toFixed(2)} hm³`);
+  console.log(`📊 Volumen total procesado: ${CapacidadTotal.toFixed(2)} hm³`);
   console.log(`📊 Porcentaje total de llenado: ${PorcentajeTotal.toFixed(2)}%`);
 
   const resumenEnDb = await ResumenEmbalses.findOne({ where: { id: 1 } });
   if (resumenEnDb) {
     await resumenEnDb.update({ CapacidadTotal, PorcentajeTotal });
-    console.log(`📌 Resumen de embalses actualizado.`);
+    console.log("📌 Resumen actualizado.");
   }
 
   await HistorialResumenEmbalses.create({
@@ -116,7 +112,7 @@ async function actualizarEmbalses() {
     fecha_registro: new Date()
   });
 
-  console.log('🎉 Actualización completada.');
+  console.log("🎉 Actualización completada.");
   console.timeEnd("Tiempo de ejecución");
 }
 
