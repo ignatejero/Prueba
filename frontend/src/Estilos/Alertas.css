@@ -1,0 +1,156 @@
+
+.alertas-page {
+  padding: 2rem;                      /* Espaciado interno */
+  display: flex;
+  flex-direction: column;            /* Elementos en columna */
+  align-items: center;               /* Centra horizontalmente */
+}
+
+/* Estilo para el título principal */
+.alertas-page h1 {
+  color: #003366;                    /* Azul oscuro */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor de todas las tarjetas de alerta */
+.feed-alertas {
+  display: flex;
+  flex-direction: column;            /* Tarjetas en columna */
+  gap: 1.25rem;                      /* Espaciado entre tarjetas */
+  width: 100%;
+  max-width: 720px;                  /* Limita ancho */
+  padding: 0 1rem;
+}
+
+/* Tarjeta individual de alerta */
+.tarjeta-alerta {
+  position: relative;
+  background: #dff0ff;               /* Fondo azul claro */
+  border-left: 4px solid #0284c7;    /* Borde azul como indicador */
+  border-radius: 0.75rem;            /* Bordes redondeados */
+  padding: 2rem 1.5rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-decoration: none;             
+  color: inherit;                    /* Hereda color de texto */
+  transition: background 0.3s;       /* Animación al hacer hover */
+}
+
+/*  hover para la tarjeta */
+.tarjeta-alerta:hover {
+  background: #cde9ff;               /* Cambio de fondo al pasar el ratón */
+}
+
+/* Estilo para la fecha y hora de la alerta */
+.timestamp {
+  display: block;
+  font-size: 0.9rem;
+  color: #0369a1;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Título dentro de la tarjeta */
+.titulo-alerta {
+  margin: 0 0 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0c4a6e;
+}
+
+/* Mensaje de la alerta */
+.mensaje {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #333;
+}
+
+/* Estilo de error en caso de fallo al cargar */
+.error {
+  color: #c00;
+  text-align: center;
+}
+
+/* Enlace a Telegram en la tarjeta */
+.telegram-link {
+  position: absolute;
+  top: 1.6rem;       /* Posicionado desde arriba */
+  left: 0.75rem;     /* Posicionado desde la izquierda */
+  display: inline-block;
+}
+
+/* Icono de Telegram */
+.telegram-icon {
+  width: 100px;
+  height: 100px;
+}
+
+/* Etiqueta verde para mostrar si el nivel se ha recuperado  */
+.etiqueta-resuelta {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background-color: #4caf50;        
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Ajustes de color para modo oscuro */
+.dark-mode h1 {
+  color: #7FDBFF;                    /* Azul claro para modo oscuro */
+}
+
+/* Previene scroll horizontal */
+body {
+  overflow-x: hidden;
+}
+
+/* móviles */
+@media (max-width: 540px) {
+  .tarjeta-alerta {
+    padding: 1.25rem 1rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .titulo-alerta {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .mensaje {
+    font-size: 0.85rem;
+    margin-top: 2rem;
+  }
+
+  .timestamp {
+    font-size: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  .telegram-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .telegram-link {
+    margin-top: 2.8rem;
+    left: 2rem;
+  }
+
+  .etiqueta-resuelta {
+    font-size: 0.65rem;
+    padding: 1px 6px;
+    top: 0.5rem;
+    right: 0.75rem;
+  }
+
+  .feed-alertas {
+    padding: 0 0.5rem;
+  }
+}

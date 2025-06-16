@@ -1,0 +1,128 @@
+[
+  {
+    "Año": 1857,
+    "PoblacionTotal": 475785,
+    "PoblacionHombre": 251147,
+    "PoblacionMujer": 224638
+  },
+  {
+    "Año": 1860,
+    "PoblacionTotal": 489332,
+    "PoblacionHombre": 253969,
+    "PoblacionMujer": 235363
+  },
+  {
+    "Año": 1877,
+    "PoblacionTotal": 596656,
+    "PoblacionHombre": 300164,
+    "PoblacionMujer": 296492
+  },
+  {
+    "Año": 1887,
+    "PoblacionTotal": 683484,
+    "PoblacionHombre": 338057,
+    "PoblacionMujer": 345427
+  },
+  {
+    "Año": 1897,
+    "PoblacionTotal": 730807,
+    "PoblacionHombre": 347373,
+    "PoblacionMujer": 383434
+  },
+  {
+    "Año": 1900,
+    "PoblacionTotal": 773011,
+    "PoblacionHombre": 369716,
+    "PoblacionMujer": 403295
+  },
+  {
+    "Año": 1910,
+    "PoblacionTotal": 831254,
+    "PoblacionHombre": 400174,
+    "PoblacionMujer": 431080
+  },
+  {
+    "Año": 1920,
+    "PoblacionTotal": 1048908,
+    "PoblacionHombre": 498047,
+    "PoblacionMujer": 550861
+  },
+  {
+    "Año": 1930,
+    "PoblacionTotal": 1290445,
+    "PoblacionHombre": 614732,
+    "PoblacionMujer": 675713
+  },
+  {
+    "Año": 1940,
+    "PoblacionTotal": 1574154,
+    "PoblacionHombre": 730360,
+    "PoblacionMujer": 843794
+  },
+  {
+    "Año": 1950,
+    "PoblacionTotal": 1823410,
+    "PoblacionHombre": 838393,
+    "PoblacionMujer": 985017
+  },
+  {
+    "Año": 1960,
+    "PoblacionTotal": 2510217,
+    "PoblacionHombre": 1179909,
+    "PoblacionMujer": 1330308
+  },
+  {
+    "Año": 1970,
+    "PoblacionTotal": 3761348,
+    "PoblacionHombre": 1800026,
+    "PoblacionMujer": 1961322
+  },
+  {
+    "Año": 1981,
+    "PoblacionTotal": 4686895,
+    "PoblacionHombre": 2261419,
+    "PoblacionMujer": 2425476
+  },
+  {
+    "Año": 1991,
+    "PoblacionTotal": 4947555,
+    "PoblacionHombre": 2383700,
+    "PoblacionMujer": 2563855
+  },
+  {
+    "Año": 2001,
+    "PoblacionTotal": 5423384,
+    "PoblacionHombre": 2609746,
+    "PoblacionMujer": 2813638
+  },
+  {
+    "Año": 2011,
+    "PoblacionTotal": 6421874,
+    "PoblacionHombre": 3097070,
+    "PoblacionMujer": 3324804
+  },
+  {
+    "Año": 2021,
+    "PoblacionTotal": 6726640,
+    "PoblacionHombre": 3221401,
+    "PoblacionMujer": 3505239
+  },
+  {
+    "Año": 2022,
+    "PoblacionTotal": 6743254,
+    "PoblacionHombre": 3229127,
+    "PoblacionMujer": 3514127
+  },
+  {
+    "Año": 2023,
+    "PoblacionTotal": 6871903,
+    "PoblacionHombre": 3288197,
+    "PoblacionMujer": 3583706
+  },
+  {
+    "Año": 2024,
+    "PoblacionTotal": 7009268,
+    "PoblacionHombre": 3356163,
+    "PoblacionMujer": 3653105
+  }
+]

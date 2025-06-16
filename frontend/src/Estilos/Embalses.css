@@ -1,0 +1,102 @@
+/* 🌞 Modo claro */
+body.light-mode .embalses-page {
+  background-color: #f5f7fa;  /* Fondo claro tipo gris azulado */
+  color: #000;                /* Texto negro para buena legibilidad */
+}
+body.light-mode .embalses-page > h1 {
+  color: #003366;             /* Título oscuro, más contraste sobre fondo claro */
+}
+
+/* 🌙 Modo oscuro */
+body.dark-mode .embalses-page {
+  background-color: #0F2D52;  /* Azul oscuro como fondo principal */
+  color: #61dafb;             /* Texto azul claro para buena visibilidad */
+}
+body.dark-mode .embalses-page > h1 {
+  color: #8ad6ff;             /* Título más brillante que el texto regular */
+}
+
+.embalses-page {
+  max-width: 1200px;          /* Ancho máximo centrado */
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* grid tarjetas */
+
+
+.embalses-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* tarjetas embalses */
+
+.embalse-card {
+  position: relative;
+  height: 180px;
+  border-radius: 8px;
+  background-size: cover;            /* Imagen cubre toda la tarjeta */
+  background-position: center;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform .1s, box-shadow .1s; /* Animación al hacer hover */
+}
+
+.embalse-card:hover {
+  transform: translateY(-4px); /* Ligero desplazamiento hacia arriba */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra más pronunciada */
+}
+
+
+.embalse-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.4); /* Superposición oscura semitransparente */
+  color: #fff;
+  text-align: center;
+}
+
+.embalse-overlay h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.barraembalse {
+  background: #ffffff;         /* Fondo blanco puro */
+  border-radius: 0.5rem;
+  height: 10px;
+  overflow: hidden;
+  margin: 0.5rem 1rem 1rem 1rem; /* Espaciado interno dentro de la tarjeta */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.progresoembalse {
+  background: #2a9d8f;         /* Verde para pintar la barra de llenado */
+  height: 100%;
+  transition: width 0.4s ease; /* Transición suave al cargar el valor */
+}
+
+body {
+  overflow-x: hidden; /* Evita que aparezca scroll horizontal inesperado */
+}
+
+@media (max-width: 1200px) {
+  .embalses-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .embalses-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles o tablets pequeñas */
+  }
+}

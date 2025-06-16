@@ -1,0 +1,646 @@
+/* ============================
+   📐 ESTRUCTURA GENERAL
+   ============================ */
+
+/* Grid principal con tres columnas y dos filas para organizar las secciones */
+.tarjeta-container {
+  display: grid;
+  grid-template-columns: minmax(0, 450px) minmax(0, 300px) minmax(0, 700px); /* Tres columnas */
+  grid-template-rows: 360px auto; /* Fila superior fija, inferior flexible */
+  column-gap: 2rem;
+  row-gap: 2rem;
+  padding: 2rem;
+}
+
+/* Tarjeta detalles del embalses (informacion general) */
+
+.tarjeta-embalse {
+  grid-row: 1 / span 2; /* Ocupar ambas filas */
+  background: #e0f7ff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Título del embalse */
+.tarjeta-embalse h2 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  text-align: center;
+  color: #003366;
+}
+
+/* Imagen del embalse */
+.img-embalse {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* información como ubicación, capacidad, etc. */
+.info-item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #003049;
+}
+.info-item .icon {
+  margin-right: 0.5rem;
+}
+.info-item strong {
+  margin-right: 0.5rem;
+}
+
+/* Subtítulos dentro de la tarjeta */
+.tarjeta-embalse h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #003049;
+}
+
+/* Barra de progreso visual que indica el nivel del embalse */
+.barra {
+  background: #d9eefb;
+  border-radius: 0.5rem;
+  height: 0.75rem;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+/* Parte rellena de la barra de progreso */
+.progreso {
+  background: #2a9d8f;
+  height: 100%;
+  transition: width 0.4s ease; /* Animación al actualizar */
+}
+
+/* Texto que muestra el porcentaje y volumen exacto */
+.porcentaje-texto {
+  font-size: 0.9rem;
+  color: #003049;
+  margin-bottom: 1.5rem;
+}
+
+/* Descripción detallada del embalse */
+.descripcion {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #003049;
+  white-space: pre-wrap;
+  margin-top: 1rem;
+}
+
+/* Tarjeta de tiempo y prediccion (Openweathermap) */
+
+/* Tarjeta que muestra el clima actual y predicciones por hora */
+.tarjeta-clima.app-style {
+  grid-row: 1;
+  margin-left: 0.5rem;
+  justify-self: start;
+  width: 310px;
+  height: 380px;
+  background: linear-gradient(180deg, #4facfe, #00f2fe);
+  border-radius: 1.5rem;
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+/* Ubicación mostrada arriba en la tarjeta */
+.clima-ubicacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.ubi-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.3rem;
+  color: #fff;
+}
+
+/* Cabecera con temperatura e icono */
+.clima-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 1rem 0.8rem;
+}
+
+.temp-grande {
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.temp-grande span {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-left: 0.2rem;
+}
+
+.icono-clima img {
+  width: 60px;
+  height: 60px;
+  margin-left: 0.5rem;
+}
+
+/* Detalles del clima */
+.clima-body {
+  text-align: center;
+  padding: 0 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.resumen {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+  text-transform: uppercase;
+}
+
+.presionyhumedad {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.sensacionTermica {
+  font-size: 0.8rem;
+}
+
+/* Horas de amanecer y anochecer */
+.clima-amanecer {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8rem;
+  opacity: 0.9;
+  padding: 0.3rem 1rem;
+}
+
+/* Lista horizontal de pronóstico por hora */
+.pronostico-horas {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  margin-top: 10%;
+  padding: 0.6rem 0;
+  gap: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hora-item {
+  flex: 0 0 auto;
+  text-align: center;
+  font-size: 0.85rem;
+  min-width: 50px;
+}
+
+.hora-item .hora {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.hora-item img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.2rem;
+}
+
+.hora-item .temp {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+}
+
+/* Scroll horizontal estilizado */
+.pronostico-horas::-webkit-scrollbar {
+  height: 4px;
+}
+.pronostico-horas::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+}
+
+/* Mapa de prediccion windy */
+
+/* Contenedor para el iframe con el mapa de windy */
+.tarjeta-mapa {
+  grid-row: 1;
+  margin-left: 0.5rem;
+  justify-self: start;
+  width: 100%;
+  height: 380px;
+  border-radius: 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.tarjeta-mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.resumen-seccion {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+  text-align: center;
+}
+
+.resumen-seccion .titulo-seccion {
+  font-size: 1.75rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+/* Tarjetas de resumen de datos */
+.datosactual {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+  margin: 1rem auto;
+  max-width: 1000px;
+}
+
+.datos {
+  background: #e0f2fe;
+  border-radius: 0.5rem;
+  width: 400px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.10);
+  padding: 1rem;
+  text-align: center;
+}
+
+.datos h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #0c4a6e;
+}
+
+.datos .valor {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366;
+}
+
+/* Grafica */
+
+/* Sección de evolución temporal del nivel del embalse */
+.resumen-historico {
+  background: #f5f7fa;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.resumen-historico .titulo-seccion {
+  font-size: 1.75rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+/* Botones para filtrar por rango de fecha */
+.filtros-fecha {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filtros-fecha button {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.filtros-fecha .activo {
+  background: #0f62fe;
+  color: #fff;
+  border-color: #0f62fe;
+}
+
+/* Contenedor del área de la gráfica */
+.chart-container {
+  width: 100%;
+  height: 300px;
+}
+
+/* Tooltip personalizado para la gráfica */
+.custom-tooltip {
+  background: #fff;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.custom-tooltip > p:nth-child(1) {
+  color: #000 !important;
+}
+.custom-tooltip > p:nth-child(2) {
+  color: #2779dd !important;
+}
+
+/* Modo oscuro */
+
+.dark-mode .resumen-historico {
+  background-color: #0F2D52;
+}
+
+.dark-mode .resumen-seccion .titulo-seccion,
+.dark-mode .resumen-historico .titulo-seccion {
+  color: #7FDBFF;
+}
+
+
+/* < 540px (Móviles */
+@media (max-width: 540px) {
+  /* Cambia el grid por una columna flex */
+  .tarjeta-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  /* Todas las tarjetas ocupan ancho completo */
+  .tarjeta-embalse,
+  .tarjeta-clima.app-style,
+  .tarjeta-mapa,
+  .resumen-seccion {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* Ajustes de la tarjeta embalse */
+  .tarjeta-embalse {
+    box-sizing: border-box;
+    padding: 1rem;
+    word-break: break-word;
+    font-size: 0.9rem;
+  }
+  .tarjeta-embalse h2 {
+    font-size: 1.4rem;
+  }
+  .tarjeta-embalse h3 {
+    font-size: 1.1rem;
+  }
+  .info-item {
+    font-size: 0.7rem;
+  }
+  .porcentaje-texto,
+  .descripcion {
+    font-size: 0.75rem;
+  }
+
+  /* Clima se adapta a altura automática */
+  .tarjeta-clima.app-style {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  /* Altura reducida del mapa */
+  .tarjeta-mapa {
+    height: 300px;
+  }
+
+  /* Títulos del resumen más pequeños */
+  .resumen-seccion .titulo-seccion,
+  .resumen-historico .titulo-seccion {
+    font-size: 1.4rem;
+  }
+
+  /* Cards resumen en una sola columna */
+  .datosactual {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
+  }
+  .datos {
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  /* Ajuste gráfico: permite scroll horizontal */
+  .chart-container{
+    height: 280px;
+    width: 120%;
+    overflow-x: auto;
+  }
+}
+
+
+/* 541px–1280px (Tablets) */
+@media (min-width: 541px) and (max-width: 1280px) {
+  /* Estructura en columna */
+  .tarjeta-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  /* Tarjetas adaptadas a ancho completo */
+  .tarjeta-embalse,
+  .tarjeta-clima.app-style,
+  .tarjeta-mapa,
+  .resumen-seccion {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* Escala tipográfica y paddings */
+  .tarjeta-embalse {
+    padding: 1.5rem;
+    font-size: 1.05rem;
+  }
+  .tarjeta-embalse h2 {
+    font-size: 2.2rem;
+  }
+  .tarjeta-embalse h3 {
+    font-size: 1.6rem;
+  }
+  .info-item,
+  .porcentaje-texto,
+  .descripcion {
+    font-size: 1.2rem;
+  }
+
+  .img-embalse {
+    height: 500px; 
+  }
+
+  /* Tarjeta del clima adaptada */
+  .tarjeta-clima.app-style {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 550px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .clima-ubicacion {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+  .clima-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+  .temp-grande {
+    font-size: 4rem;
+    line-height: 1;
+  }
+  .temp-grande span {
+    font-size: 1.5rem;
+    margin-left: 0.25rem;
+  }
+  .icono-clima img {
+    width: 58px;
+    height: 58px;
+  }
+  .clima-body .resumen,
+  .clima-body .presionyhumedad,
+  span {
+    font-size: 1.2rem;
+  }
+
+  /* Amanecer y anochecer */
+  .clima-amanecer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+  .clima-amanecer span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  /* Scroll horizontal para pronóstico */
+  .pronostico-horas {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 1rem 0 0.5rem;
+    gap: 4.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 0.2rem;
+  }
+  .hora-item {
+    flex: 0 0 auto;
+    min-width: 65px;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .hora-item .hora {
+    margin-bottom: 0.2rem;
+  }
+  .hora-item .temp {
+    margin-top: 0.2rem;
+    font-size: 1.4rem;
+  }
+  .hora-item img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .pronostico-horas::-webkit-scrollbar {
+    height: 4px;
+  }
+  .pronostico-horas::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+  }
+
+  /* Altura del mapa adaptada */
+  .tarjeta-mapa {
+    height: 340px;
+  }
+
+  /* Cards resumen adaptadas */
+  .datosactual {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  .datos {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+  }
+  .datos h3 {
+    font-size: 1.3rem;
+  }
+  .datos .valor {
+    font-size: 2.2rem;
+  }
+
+  /* Ajustes de gráfica */
+  .chart-container {
+    width: 140%;
+    height: 320px;
+    overflow-x: auto;
+  }
+
+  .resumen-seccion .titulo-seccion,
+  .resumen-historico .titulo-seccion {
+    font-size: 2rem;
+  }
+}
+
+/* 1280px–1480px (pantallas grandes) */
+
+@media (min-width: 1280px) and (max-width: 1480px){
+  /* Cards más anchas con mejor distribución */
+  .datosactual {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .datos {
+    width: 100%;
+    max-width: 480px;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+  }
+  .datos h3 {
+    font-size: 1.4rem;
+  }
+  .datos .valor {
+    font-size: 2.4rem;
+  }
+}
+

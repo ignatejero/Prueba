@@ -1,0 +1,238 @@
+
+.resumen-embalses {
+  display: flex;
+  flex-direction: column;     /* Ponemos los elementos uno debajo del otro */
+  gap: 2rem;
+  margin: 2rem 0;
+  background: #f5f7fa;        /* Fondo claro */
+  padding: 2rem 0;            /* Espacio vertical */
+  border-radius: 1rem;        /* Bordes redondeados generales */
+  margin-top: -20px;          /* Lo subimos un poco respecto a secciones anteriores */
+}
+
+/* ==== Título principal de la sección ==== */
+.titulo-seccion {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #003366; /* Azul fuerte para destacar */
+}
+  
+/* ==== Contenedor de tarjetas de datos actuales ==== */
+.cards-actual {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(485px, 1fr)); /* Hacemos que las tarjetas se adapten */
+  gap: 1.5rem;
+  padding: 0 1rem;
+  margin: 1rem auto;
+  max-width: 1000px; /* Limitamos el ancho en pantallas grandes */
+}
+
+/* ==== Tarjeta individual con resumen de datos ==== */
+.card {
+  background: #e0f2fe;        /* Azul muy claro */
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ==== Título dentro de cada tarjeta ==== */
+.card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #0c4a6e; /* Azul oscuro */
+}
+
+/* ==== Variante para tarjetas de crecimiento ==== */
+.cards-actual.crecimiento {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cards-actual.crecimiento .card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  background: #e0f2ff;  /* Fondo ligeramente diferente */
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* ==== Lista dentro de las tarjetas ==== */
+.cards-actual.crecimiento ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.cards-actual.crecimiento li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ==== Valor numérico destacado ==== */
+.valor {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #003366; 
+}
+
+/* ==== Lista de valores (con texto explicativo) ==== */
+.valor-lista {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #0f172a;
+}
+
+.valor-lista span {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.valor-lista strong {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* ==== Sección donde va la gráfica histórica ==== */
+.resumen-historico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0F2D52; /* Fondo azul oscuro */
+}
+
+/* ==== Contenedor visual del gráfico ==== */
+.resumen-historico .chart-container {
+  width: 100%;
+  max-width: 1000px;
+  height: 350px;
+  background: #e0f2fe;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+  overflow-x: auto; /* Permitimos scroll horizontal si es necesario */
+}
+
+/* ==== Indicador de carga del gráfico o datos ==== */
+.loading {
+  text-align: center;
+  color: #666;
+}
+
+/* ==== Contenedor de botones para filtrar fechas ==== */
+.filtros-fecha {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap; /* Permitimos que bajen los botones en móviles */
+}
+
+/* ==== Estilo de los botones de filtro ==== */
+.filtros-fecha button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #0f172a;
+  transition: background 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* ==== Hover sobre los botones de fecha ==== */
+.filtros-fecha button:hover {
+  background: #eee;
+  transform: scale(1.03); /* Pequeña ampliación al pasar el mouse */
+}
+
+/* ==== Botón activo (seleccionado) ==== */
+.filtros-fecha button.activo {
+  background: #0284c7;
+  color: white;
+  border-color: #0284c7;
+}
+
+/* ==== Sección promocional para canal de Telegram ==== */
+.bloque-telegram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e0f2fe;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  margin: 2.5rem auto 3rem;
+  text-align: center;
+}
+
+/* Texto dentro del bloque de Telegram*/
+.bloque-telegram p {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/*Imagen QR para Telegram*/
+.qr-telegram {
+  width: 160px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* ==== Modo oscuro */
+.dark-mode .resumen-embalses {
+  background-color: #0F2D52;
+}
+
+.dark-mode .resumen-embalses .resumen-historico {
+  background-color: #0F2D52;
+}
+
+.dark-mode .resumen-embalses h2 {
+  color: #7FDBFF;
+}
+
+.dark-mode .resumen-embalses .resumen-historico h3 {
+  color: #7FDBFF;
+}
+
+/* Prevenimos scroll horizontal inesperado */
+body {
+  overflow-x: hidden;
+}
+
+/* pantallas medianas y pequeñas */
+@media (max-width: 1024px) {
+  .cards-actual {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustamos tarjetas a columnas más pequeñas */
+  }
+  .resumen-historico .chart-container {
+    max-width: 95%;
+    height: 320px;
+  }
+}
+
+/* Pantallas muy pequeñas*/
+@media (max-width: 500px) {
+  .cards-actual {
+    grid-template-columns: 1fr;
+    padding: 0 0.75rem;
+  }
+
+  .bloque-telegram {
+    padding: 1rem 1rem;
+    margin: 2rem 1rem;
+    width: auto;
+  }
+}

@@ -1,0 +1,325 @@
+﻿{
+    "Url": "www.epdata.es/consumo-medio-agua-hogares-comunidad-autonoma/18cdd93f-e756-4e43-8f5a-68c0473956ae",
+    "Respuesta": {
+        "Id": "18cdd93f-e756-4e43-8f5a-68c0473956ae",
+        "Url": "www.epdata.es/consumo-medio-agua-hogares-comunidad-autonoma/18cdd93f-e756-4e43-8f5a-68c0473956ae",
+        "Titulo": "Consumo medio de agua de los hogares por comunidad autónoma",
+        "Subtitulo": "",
+        "Datos": {
+            "Metricas": [
+                {
+                    "Id": 0,
+                    "Nombre": "2020",
+                    "SonDatosNumericos": true,
+                    "Fuente": "INE",
+                    "Clasificacion": null,
+                    "Unidad": "litro/habitante/día",
+                    "Escala": "Unidades",
+                    "EscalaFactorPotencia10": 0,
+                    "Datos": [
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Andalucía",
+                            "Valor": 138,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Aragón",
+                            "Valor": 134,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Asturias",
+                            "Valor": 136,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Baleares",
+                            "Valor": 117,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Canarias",
+                            "Valor": 125,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Cantabria",
+                            "Valor": 165,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "CyL",
+                            "Valor": 144,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "CLM",
+                            "Valor": 126,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Cataluña",
+                            "Valor": 124,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "C. Valenciana",
+                            "Valor": 157,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Extremadura",
+                            "Valor": 120,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Galicia",
+                            "Valor": 130,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Madrid",
+                            "Valor": 129,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Murcia",
+                            "Valor": 150,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Navarra",
+                            "Valor": 120,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "País Vasco",
+                            "Valor": 97,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "La Rioja",
+                            "Valor": 124,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Ceuta y Melilla",
+                            "Valor": 122,
+                            "Estado": null,
+                            "Notas": null
+                        }
+                    ]
+                },
+                {
+                    "Id": 1,
+                    "Nombre": "2022",
+                    "SonDatosNumericos": true,
+                    "Fuente": "INE",
+                    "Clasificacion": null,
+                    "Unidad": "litro/habitante/día",
+                    "Escala": "Unidades",
+                    "EscalaFactorPotencia10": 0,
+                    "Datos": [
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Andalucía",
+                            "Valor": 140,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Aragón",
+                            "Valor": 110,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Asturias",
+                            "Valor": 143,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Baleares",
+                            "Valor": 126,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Canarias",
+                            "Valor": 115,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Cantabria",
+                            "Valor": 187,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "CyL",
+                            "Valor": 146,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "CLM",
+                            "Valor": 134,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Cataluña",
+                            "Valor": 113,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "C. Valenciana",
+                            "Valor": 139,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Extremadura",
+                            "Valor": 127,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Galicia",
+                            "Valor": 128,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Madrid",
+                            "Valor": 125,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Murcia",
+                            "Valor": 133,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Navarra",
+                            "Valor": 130,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "País Vasco",
+                            "Valor": 85,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "La Rioja",
+                            "Valor": 119,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2024,
+                            "Periodo": "Año",
+                            "Parametro": "Ceuta y Melilla",
+                            "Valor": 147,
+                            "Estado": null,
+                            "Notas": null
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

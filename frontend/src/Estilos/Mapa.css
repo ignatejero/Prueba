@@ -1,0 +1,235 @@
+/* ==== Estilo general de la sección del mapa ==== */
+.seccion-mapa {
+  background-color: #f5f7fa; /* Ponemos un fondo claro para toda la sección */
+  padding: 4rem 1rem;        /* Espaciado generoso arriba y a los lados */
+  text-align: center;
+}
+
+.seccion-mapa h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  margin-top: 0rem;
+  color: #003366; /* Usamos un azul fuerte para el título */
+}
+
+/* ==== Tarjeta que contiene el mapa ==== */
+.mapa-card {
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 20px; 
+  background: #93c3d6;   /* Color de fondo suave */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra suave para efecto flotante */
+  width: 90%;
+  max-width: 1000px; /* Limitamos el ancho máximo en pantallas grandes */
+}
+
+/* ==== Contenedor del mapa ==== */
+.mapa-div {
+  width: 100%;
+  height: 500px;
+  border-radius: 16px; /* Redondeamos bordes del mapa */
+  overflow: hidden;    /* Evitamos que elementos salgan del contenedor */
+  position: relative;
+}
+
+/* ==== Estilo del marcador de embalse personalizado ==== */
+.embalse-marcador {
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  display: block;
+}
+
+/* ==== Modo oscuro: adaptamos fondo y leyenda ==== */
+.dark-mode .seccion-mapa {
+  background-color: #0F2D52; /* Ponemos un azul oscuro como fondo */
+}
+
+.dark-mode .leyenda-panel {
+  color: #111; /* Aseguramos contraste del texto en leyenda */
+}
+
+/* ==== Botones superpuestos: leyenda y reset ==== */
+.leyenda-boton,
+.reset-vista-boton {
+  position: absolute;
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: white;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra para destacarlos */
+  cursor: pointer;
+  z-index: 2;
+  font-weight: 500;
+}
+
+.leyenda-boton:hover,
+.reset-vista-boton:hover {
+  background-color: #f0f0f0; /* Suavizamos el hover con gris claro */
+}
+
+/* Posicionamos los botones principales */
+.leyenda-boton {
+  top: 12px;
+  left: 12px;
+}
+
+.reset-vista-boton {
+  top: 12px;
+  right: 70px;
+}
+
+/* ==== Botón para alternar vista 2D / 3D ==== */
+.toggle-2d3d-boton {
+  position: absolute;
+  bottom: 40px;
+  right: 12px;
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: white;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 2;
+  font-weight: 500;
+}
+
+.toggle-2d3d-boton:hover {
+  background-color: #f0f0f0;
+}
+
+/* ==== Leyenda que aparece sobre el mapa ==== */
+.leyenda-panel {
+  position: absolute;
+  top: 50px;
+  left: 12px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 2;
+  text-align: left;
+}
+
+.leyenda-panel img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* ==== Texto de título en modo oscuro */
+.dark-mode .seccion-mapa h2 {
+  color: #7FDBFF; /* Usamos azul claro para destacar el texto en modo oscuro */
+}
+
+/* ==== Estilo del contenido de los popups ==== */
+.mapboxgl-popup-content {
+  padding: 14 px 16px !important;
+  border-radius: 12px !important;
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 260px;
+}
+
+.popup-embalse h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #1e3a8a; /* Azul fuerte para títulos de popup */
+}
+
+.popup-embalse p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.popup-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #2563eb; /* Enlace azul visible */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.popup-link:hover {
+  text-decoration: underline; /* Subrayamos al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+  .seccion-mapa h2 {
+    font-size: 1.5rem; /* Hacemos el título más pequeño en tablets */
+  }
+
+  .mapa-div {
+    height: 350px; /* Reducimos la altura del mapa */
+  }
+
+  .mapa-card {
+    padding: 0.75rem;
+    border-radius: 12px;
+  }
+
+  .embalse-marker {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion-mapa {
+    padding: 2rem 0.5rem; /* Reducimos padding lateral */
+  }
+
+  .mapa-div {
+    height: 300px;
+  }
+
+  .mapa-card {
+    width: 90%; /* Aseguramos buen ajuste en móviles */
+  }
+
+  .seccion-mapa h2 {
+    font-size: 1.3rem; /* Reducimos tamaño del título */
+  }
+}
+
+@media (max-width: 500px) {
+  /* Movemos el botón "Resetear Vista" a la parte inferior izquierda */
+  .reset-vista-boton {
+    top: auto;
+    bottom: 40px;
+    right: auto;
+    left: 12px;
+  }
+
+  /* Reducimos tamaño de todos los botones para móviles */
+  .leyenda-boton,
+  .reset-vista-boton,
+  .toggle-2d3d-boton {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+
+  /* Reducimos el espacio y el texto de la leyenda */
+  .leyenda-panel {
+    top: 50px;
+    font-size: 11px;
+    padding: 8px;
+  }
+
+  .leyenda-panel img {
+    width: 16px;
+  }
+}

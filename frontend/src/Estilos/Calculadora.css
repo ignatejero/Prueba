@@ -1,0 +1,287 @@
+/* Contenedores generales */
+.calculadora-page {
+  padding: 2rem 1rem;
+  background-color: #f5f7fa;
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto;    /* centrado horizontal */
+}
+
+/* Títulos de sección */
+.titulo-calculadora {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 2rem;
+}
+
+.cta-section {
+  color: #003366;
+}
+
+.dark-mode .cta-section {
+  color: #7FDBFF;
+}
+
+/* Intro / recuadros azules */
+.calculadora-container,
+.intro-card {
+  background-color: #eaf5ff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.20);
+  color: #003b6f;
+  line-height: 1.5;
+}
+
+/* Recuadro azul más compacto y centrado */
+.intro-card {
+  flex: 1 1 35%;              /* ocupa un 35% del ancho */
+  max-width: 35%;
+  padding: 1.2rem 1.5rem;     /* algo más de padding en horizontal */
+  background-color: #eaf5ff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.20);
+  color: #003b6f;
+  line-height: 1.5;
+  
+}
+
+
+.intro-card p {
+  margin-bottom: 1rem;
+}
+
+.intro-card ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.graficas-side-by-side {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;              /* más separación horizontal */
+  justify-content: center;
+  align-items: center;    /* centra verticalmente sus hijos */
+  padding: 2rem 1rem;
+}
+
+/* Cartas de gráfico */
+.grafica-container {
+  background-color: #fff6f6;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.20);
+  flex: 1 1 calc(45% - 1rem);
+  max-width: calc(45% - 1rem);
+}
+
+.grafica-container h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Fuente pie-chart */
+.fuente {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Custom tooltip */
+.custom-tooltip {
+  background: #fff;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.custom-tooltip .label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* Formulario y resultados (iguales a antes) */
+.formulario label {
+  display: block;
+  margin-bottom: 1.4rem;
+  font-weight: 600;
+  color: #002244;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #0078d7;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #005fa3;
+}
+
+.input-error {
+  border: 2px solid #d30000;
+}
+
+.mensaje-error {
+  color: #d30000;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  display: block;
+  font-weight: bold;
+}
+
+.resultado {
+  text-align: center;
+}
+
+.resultado h2 {
+  margin-bottom: 1rem;
+  color: #002244;
+}
+
+.datos-curiosos p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.botones-finales {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.dark-mode .calculadora-page{
+  background-color: #0F2D52;     /* Azul oscuro */
+}
+
+.dark-mode .titulo-calculadora{
+  color: #7FDBFF;
+  background-color: #0F2D52;     /* Azul oscuro */
+}
+
+.grafica-container {
+  overflow-x: hidden; 
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 750px) {
+  /* Sección principal */
+  .calculadora-page {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .titulo-calculadora {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Bloques intro y gráfico */
+  .graficas-side-by-side {
+    flex-direction: column;
+    padding: 1rem 0.75rem;
+    gap: 2rem;
+  }
+
+  .intro-card,
+  .grafica-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .intro-card p {
+    font-size: 0.95rem;
+  }
+
+  .grafica-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .fuente {
+    font-size: 0.8rem;
+  }
+
+  /* Formularios */
+  .formulario label {
+    font-size: 0.95rem;
+  }
+
+  .formulario input {
+    font-size: 1rem;
+  }
+
+  .botones-finales {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* Resultados */
+  .resultado h2 {
+    font-size: 1.4rem;
+  }
+
+  .resultado p {
+    font-size: 1rem;
+  }
+
+  .datos-curiosos p {
+    font-size: 0.95rem;
+  }
+
+  .button {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  /* Gráficas */
+  .grafica-container {
+    overflow-x: auto;
+  }
+
+  .grafica-container .recharts-responsive-container {
+    min-width: 320px;
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+.recharts-default-legend {
+    font-size: 0.7rem !important;
+    max-width: 100%;
+    margin-left: 2rem;
+    margin-right: 8px;
+    display: flex !important;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    line-height: 1.2;
+  }
+}
