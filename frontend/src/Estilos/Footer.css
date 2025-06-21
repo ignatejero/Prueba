@@ -1,100 +1,130 @@
 .footer {
-    background-color: #ffffff;
-    color: #222222;
-    margin-top: 0;
-    /* padding: top right bottom left */
-    padding: 0.25rem 0.5rem 1.5rem 0.5rem; /* bottom aumentado para más hueco */
-  }
-  
-  
-  /* Toggle encima de las columnas */
-  .footer-theme-toggle-above {
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-  .theme-toggle {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  .theme-toggle:hover {
-    transform: scale(1.1);
-  }
-  
-  .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 0.75rem;
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .footer-column {
-    flex: 1 1 240px;
-    margin: 0.25rem 0;
-  }
-  
-  .footer-column h4 {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    color: #007ACC;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .footer-bandera {
-    width: 24px;
-    margin-right: 6px;
-  }
-  
-  .footer-attribution {
-    margin-top: 0.25rem;
-    font-size: 0.9rem;
-  }
-  
-  .footer-column ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .footer-column ul li {
-    margin-bottom: 0.25rem;
-  }
-  
-  .footer-column a {
-    color: inherit;
-    text-decoration: none;
-  }
-  .footer-column a:hover {
-    text-decoration: underline;
-  }
-  
-  .telegram-icon {
-    width: 20px;
-    vertical-align: middle;
-    margin-right: 6px;
-  }
-  
-  /* Modo oscuro */
-  body.dark-mode .footer {
-    background-color: #001f3f;
-    color: #ffffff;
-  }
-  body.dark-mode .footer-column h4 {
-    color: #7FDBFF;
-  }
-  body.dark-mode .footer-column a {
-    color: #ffffff;
-  }
-  body.dark-mode .footer-attribution {
-    color: #cccccc;
-  }
-  /* Tinte del sol en modo oscuro */
-  body.dark-mode .footer-theme-toggle-above .theme-toggle {
-    filter: invert(70%) sepia(30%) saturate(500%) hue-rotate(180deg) brightness(110%);
-  }
-  
+  background-color: #ffffff;
+  color: #222222;
+  margin-top: 0;
+  /* padding: top right bottom left */
+  padding: 0.25rem 0.5rem 1.5rem 0.5rem; /* bottom aumentado para más hueco */
+}
+
+/* Toggle encima de las columnas */
+.footer-theme-toggle-above {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.1rem;
+}
+
+.theme-toggle {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0.75rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-column {
+  flex: 1 1 240px;
+  margin: 0.25rem 0;
+}
+
+.footer-column h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #007ACC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-bandera {
+  width: 24px;
+  margin-right: 6px;
+}
+
+.footer-attribution {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.25rem;
+}
+
+.footer-column a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.telegram-icon {
+  width: 100px;
+  height: auto;
+  margin-right: 0;
+  display: block;
+  margin: 0 auto 0.25rem auto;
+}
+
+
+/* Modo oscuro */
+body.dark-mode .footer {
+  background-color: #001f3f;
+  color: #ffffff;
+}
+
+body.dark-mode .footer-column h4 {
+  color: #7FDBFF;
+}
+
+body.dark-mode .footer-column a {
+  color: #ffffff;
+}
+
+body.dark-mode .footer-attribution {
+  color: #cccccc;
+}
+
+/* modo oscuro */
+body.dark-mode .footer-theme-toggle-above .theme-toggle {
+  filter: invert(70%) sepia(30%) saturate(500%) hue-rotate(180deg) brightness(110%);
+}
+
+/* Centrado del QR */
+.footer-qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-qr-image {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+.footer-qr-link {
+  text-decoration: none;
+  color: inherit;
+}

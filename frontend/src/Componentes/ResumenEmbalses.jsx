@@ -285,7 +285,7 @@ const ResumenEmbalses = () => {
       {/* ▶ Promoción de grupo de Telegram */}
       <div className="bloque-telegram">
         <p>
-          📢 ¿Quieres estar al tanto de las novedades?
+          📢 ¿Quieres estar al tanto de las últimas alertas?
           <br />
           👉 <strong>Únete al grupo de Telegram</strong>
         </p>

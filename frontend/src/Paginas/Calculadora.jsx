@@ -347,7 +347,7 @@ export default function Calculadora() {
       <h1 className="titulo-calculadora">Calculadora de Consumo de Agua</h1>
       <div className="calculadora-container">
         <p className="intro">
-          Esta calculadora te ayuda a estimar tu consumo semanal de agua en el hogar...
+          Esta calculadora te ayuda a estimar tu consumo semanal de agua en el hogar
         </p>
 
         {/* Formulario de preguntas dividido en pasos */}

@@ -90,7 +90,7 @@
   text-align: center;
   font-size: 0.9rem;
   color: #555;
-  margin-top: 0.5rem;
+  margin-top: 1.4rem;
 }
 
 /* Custom tooltip */
@@ -268,11 +268,9 @@ body {
 
   .grafica-container .recharts-responsive-container {
     min-width: 320px;
-    max-height: 400px;
   }
 
 }
-
 
 @media (max-width: 1024px) {
 .recharts-default-legend {

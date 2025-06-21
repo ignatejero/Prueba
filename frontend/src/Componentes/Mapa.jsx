@@ -232,8 +232,8 @@ const Mapa = () => {
 
       <div className="mapa-card">
         <div ref={mapaContainer} className="mapa-div">
-          {/* Botones sobre el mapa */}
-          <div className="botonera-superpuesta">
+          {/* Ponemos los Botones sobre el mapa */}
+          <div className="botones">
             <button
               className="leyenda-boton"
               onClick={() => setMostrarLeyenda((m) => !m)}

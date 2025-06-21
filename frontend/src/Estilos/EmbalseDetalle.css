@@ -1,6 +1,4 @@
-/* ============================
-   📐 ESTRUCTURA GENERAL
-   ============================ */
+
 
 /* Grid principal con tres columnas y dos filas para organizar las secciones */
 .tarjeta-container {
@@ -53,6 +51,46 @@
 .info-item strong {
   margin-right: 0.5rem;
 }
+
+/* Alinea tuerca + título horizontalmente */
+.uso-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.uso-header .icon {
+  margin-right: 0.5rem;
+}
+
+/* Lista sin viñetas, centrada */
+.uso-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #003049;
+}
+
+.uso-lista li {
+  margin-bottom: 0.3rem;
+}
+
+.uso-bloque-con-lineas {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.uso-linea {
+  border: none;
+  height: 1px;
+  background-color: #003049;
+  opacity: 0.3;
+  margin: 1rem auto;
+  width: 60%;
+}
+
 
 /* Subtítulos dentro de la tarjeta */
 .tarjeta-embalse h3 {
@@ -397,14 +435,14 @@
     font-size: 1.4rem;
   }
   .tarjeta-embalse h3 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   .info-item {
-    font-size: 0.7rem;
+    font-size: 1.2rem;
   }
   .porcentaje-texto,
   .descripcion {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 
   /* Clima se adapta a altura automática */

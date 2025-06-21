@@ -31,17 +31,17 @@ const Footer = () => {
             <img src={banderaIcon} alt="Bandera Madrid" className="footer-bandera" />
             Embalses CAM
           </h4>
-          <p><strong>Comunidad de Madrid © 2025</strong></p>
           <p className="footer-attribution">
             Datos proporcionados por{' '}
             <a href="https://www.miteco.gob.es/" target="_blank" rel="noopener noreferrer">
             <strong>Ministerio para la Transición Ecológica</strong>
             </a>{' '}
             y{' '}
-            <a href="https://saih.chebro.es/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.chtajo.es/" target="_blank" rel="noopener noreferrer">
             <strong>SAIH Confederaciones</strong>
             </a>
           </p>
+          <p><strong>Jose Ignacio Tejero Ruiz © 2025</strong></p>
         </div>
 
         {/* Navegación */}
@@ -51,7 +51,7 @@ const Footer = () => {
             <li><a href="/"><strong>Inicio</strong></a></li>
             <li><a href="/embalses"><strong>Embalses</strong></a></li>
             <li><a href="/alertas"><strong>Alertas</strong></a></li>
-            <li><a href="/calculadora"><strong>Calculadora Consumo</strong></a></li>
+            <li><a href="/calculadora"><strong>Sobre el proyecto</strong></a></li>
           </ul>
         </div>
 

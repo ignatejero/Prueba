@@ -8,6 +8,8 @@ import iconoOscuro from '../Iconos/modo-noche.png'
 import iconoBusqueda from '../Iconos/busqueda.png'
 import iconoBandera from '../Iconos/banderaMadrid.png'
 
+//import iconoBandera from '../Iconos/Logo2.png'
+
 // Ponemos aquí la lista de embalses con su nombre y slug para las rutas
 const embalsesDisponibles = [
   { nombre: 'Pinilla', slug: 'pinilla' },
