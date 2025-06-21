@@ -438,11 +438,11 @@
     font-size: 1.4rem;
   }
   .info-item {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   .porcentaje-texto,
   .descripcion {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   /* Clima se adapta a altura automática */
