@@ -41,7 +41,7 @@
 .info-item {
   display: flex;
   align-items: center;
-  font-size: 0.7rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   color: #003049;
 }
@@ -125,7 +125,7 @@
 
 /* Descripción detallada del embalse */
 .descripcion {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.4;
   color: #003049;
   white-space: pre-wrap;

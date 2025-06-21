@@ -126,7 +126,7 @@ export const detallesEmbalses = {
     uso: 'Abastecimiento, Riego, Pesca, Navegación, Restauración',
     descripcion: `Situado en el piedemonte de la sierra de Guadarrama, el embalse de Pedrezuela, anteriormente llamado embalse de El Vellón, se construyó en 1968, aguas arriba del azud de El Mesto para poder regular las aguas del cauce del Guadalix. 
 
-    A los pies del embalse se construyó, en 2008, una central hidroeléctrica para aprovechar la energía de las aguas que se envían por el canal El Vellón que nace en esta minicentral
+    A los pies del embalse se construyó, en 2008, una central hidroeléctrica para aprovechar la energía de las aguas que se envían por el canal El Vellón que nace en esta minicentral.
 
     Con la construcción de esta presa quedó en desuso el azud de El Mesto, que da origen al canal de Guadalix. Aunque, en la actualidad, ninguna de estas dos instalaciones está siendo utilizada, ambas están en perfecto estado para ponerse en funcionamiento.`,
     imagen: pedrezuelaImagen,
@@ -156,7 +156,7 @@ export const detallesEmbalses = {
     uso: 'Abastecimiento, Riego, Pesca',
     descripcion: `El embalse de Navacerrada está situado en el cauce del río Samburiel, conocido popularmente como «río Navacerrada», que es afluente del Manzanares y tiene una cuenca de veinte kilómetros cuadrados.
 
-    Construido en 1969, recoge las aguas del río Samburiel y del embalse de Navalmedio a través de un trasvase. Con ellas se abastece a buena parte de los municipios de la sierra de Guadarrama
+    Construido en 1969, recoge las aguas del río Samburiel y del embalse de Navalmedio a través de un trasvase. Con ellas se abastece a buena parte de los municipios de la sierra de Guadarrama.
 
     Su presa, de cuarenta y siete metros de altura y de gravedad de planta mixta, está realizada en hormigón vibrado. De perfil triangular, dispone de dos galerías horizontales paralelas al paramento de aguas arriba.
 
