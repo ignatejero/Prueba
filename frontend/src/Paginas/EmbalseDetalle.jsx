@@ -57,7 +57,7 @@ export const detallesEmbalses = {
     dbId: 2,
     nombre: 'Embalse de Riosequillo',
     rios: 'Río Lozoya', 
-    capacidadMaxima: 38,
+    capacidadMaxima: 50,
     ubicacion: 'Buitrago del Lozoya, Madrid',
     uso: 'Abastecimiento, Electricidad, Pesca, Navegación, Baño, Picnic, Restauración',
     descripcion: `El embalse de Riosequillo fue inaugurado en 1958 para solventar los problemas de escasez de agua potable que provocó el aumento de la población en la ciudad de Madrid tras la Guerra Civil. 
@@ -72,7 +72,7 @@ export const detallesEmbalses = {
     dbId: 3,
     nombre: 'Embalse de Puentes Viejas',
     rios: 'Río Lozoya',
-    capacidadMaxima: 38,
+    capacidadMaxima: 53,
     ubicacion: 'Puentes Viejas, Madrid',
     uso: 'Pesca, Navegación, Baño, Restauración',
     descripcion: `El embalse de Puentes Viejas se sitúa en tercer lugar siguiendo el curso del río Lozoya, inmediatamente aguas arriba del embalse de El Villar en el que vierte sus aguas.
@@ -89,7 +89,7 @@ export const detallesEmbalses = {
     dbId: 4,
     nombre: 'Embalse de El Villar',
     rios: 'Río Lozoya', 
-    capacidadMaxima: 38,
+    capacidadMaxima: 23,
     ubicacion: 'Puentes Viejas, Madrid',
     uso: 'Abastecimiento, Electricidad, Pesca, Restauración',
     descripcion: `Situado en el curso bajo del río Lozoya, el embalse de El Villar supuso la solución real al problema del abastecimiento de agua a Madrid tras el fracaso de la presa del Pontón de la Oliva. Hasta su entrada en servicio, Madrid se abastecía de las aguas fluyentes (sin regulación) de los ríos Lozoya y Guadalix.
@@ -106,7 +106,7 @@ export const detallesEmbalses = {
     dbId: 5,
     nombre: 'Embalse de El Atazar',
     rios: 'Río Lozoya', 
-    capacidadMaxima: 38,
+    capacidadMaxima: 426,
     ubicacion: 'El Atazar, Madrid',
     uso: 'Abastecimiento, Riego, Electricidad, Pesca, Navegación, Picnic',
     descripcion: `La construcción de la presa de El Atazar responde al intento de satisfacer las necesidades de abastecimiento de agua de la población madrileña cuando, a finales de los años 50 del pasado siglo, se sufre un importante período de sequía que hace temer el agotamiento de las reservas.
@@ -121,7 +121,7 @@ export const detallesEmbalses = {
     dbId: 6,
     nombre: 'Embalse de Pedrezuela',
     rios: 'Río Guadalix', 
-    capacidadMaxima: 38,
+    capacidadMaxima: 41,
     ubicacion: 'Pedrezuela, Madrid',
     uso: 'Abastecimiento, Riego, Pesca, Navegación, Restauración',
     descripcion: `Situado en el piedemonte de la sierra de Guadarrama, el embalse de Pedrezuela, anteriormente llamado embalse de El Vellón, se construyó en 1968, aguas arriba del azud de El Mesto para poder regular las aguas del cauce del Guadalix. 
@@ -136,7 +136,7 @@ export const detallesEmbalses = {
     dbId: 7,
     nombre: 'Embalse de Santillana',
     rios: 'Río Manzanares', 
-    capacidadMaxima: 38,
+    capacidadMaxima: 91,
     ubicacion: 'Manzanares el Real, Madrid',
     uso: 'Abastecimiento, Riego, Electricidad, Pesca',
     descripcion: `El embalse de Manzanares el Real, situado en el río Manzanares, toma el nombre del municipio más cercano a su ubicación. Construido en 1971 supuso el recrecimiento del anterior embalse de Santillana anegando la presa existente construida entre 1906 y 1920 y, con solo cinco metros más de altura, duplicó su capacidad de almacenamiento.
@@ -151,7 +151,7 @@ export const detallesEmbalses = {
     dbId: 8,
     nombre: 'Embalse de Navacerrada',
     rios: 'Río Navacerrada', 
-    capacidadMaxima: 38,
+    capacidadMaxima: 11,
     ubicacion: 'Navacerrada, Madrid',
     uso: 'Abastecimiento, Riego, Pesca',
     descripcion: `El embalse de Navacerrada está situado en el cauce del río Samburiel, conocido popularmente como «río Navacerrada», que es afluente del Manzanares y tiene una cuenca de veinte kilómetros cuadrados.
@@ -168,7 +168,7 @@ export const detallesEmbalses = {
     dbId: 9,
     nombre: 'Embalse de Navalmedio',
     rios: 'Río Navalmedio', 
-    capacidadMaxima: 38,
+    capacidadMaxima: 0.7,
     ubicacion: 'Cercedilla, Madrid',
     uso: 'Abastecimiento',
     descripcion: `El embalse de Navalmedio se encuentra situado en el río, afluente del Guadarrama, que lleva su mismo nombre. Construido en 1969, regula una cuenca propia de unos nueve kilómetros cuadrados, pero su función principal es trasvasar las aguas del río Navalmedio al embalse de Navacerrada. 
@@ -183,7 +183,7 @@ export const detallesEmbalses = {
     dbId: 10,
     nombre: 'Embalse de La Jarosa',
     rios: 'Arroyo de La Jarosa', 
-    capacidadMaxima: 38,
+    capacidadMaxima: 7,
     ubicacion: 'Guadarrama, Madrid',
     uso: 'Abastecimiento, Pesca, Restauración',
     descripcion: `Situado en el arroyo del mismo nombre, se construyó en 1969 como respuesta a las necesidades de los pueblos de la zona noroeste de la región, que veían muy limitadas sus posibilidades de desarrollo debido a la escasez de agua sobre todo en época estival. Regula una cuenca propia de unos dieciocho kilómetros cuadrados y recibe también aportaciones del río Cofio a través de un trasvase que parte del embalse de La Aceña.
@@ -198,7 +198,7 @@ export const detallesEmbalses = {
     dbId: 11,
     nombre: 'Embalse de Valmayor',
     rios: 'Río Aulencia', 
-    capacidadMaxima: 38,
+    capacidadMaxima: 124,
     ubicacion: 'Valdemorillo, Madrid',
     uso: 'Abastecimiento, Riego, Pesca, Picnic',
     descripcion: `Construido en 1976, actualmente se lo considera el segundo embalse de la Comunidad de Madrid en cuanto a capacidad de almacenamiento.
@@ -213,7 +213,7 @@ export const detallesEmbalses = {
     dbId: 12,
     nombre: 'Embalse de El Pardo',
     rios: 'Río Manzanares', 
-    capacidadMaxima: 38,
+    capacidadMaxima: 43,
     ubicacion: 'Fuencarral-El Pardo, Madrid',
     uso: 'Abastecimiento, Electricidad, Restauración',
     descripcion: `El embalse de El Pardo terminó de construirse en el año 1970. La presa integra un dique de tierra y alcanza una altura máxima sobre el cauce de 35 metros de altura. Su longitud en coronación es de 830 metros.
@@ -228,7 +228,7 @@ export const detallesEmbalses = {
     dbId: 13,
     nombre: 'Embalse de San Juan',
     rios: 'Río Alberche', 
-    capacidadMaxima: 38,
+    capacidadMaxima: 138,
     ubicacion: 'San Martín de Valdeiglesias, Madrid',
     uso: 'Abastecimiento, Riego, Electricidad, Pesca, Navegación, Baño, Picnic, Restauración',
     descripcion: `Construido en 1955, el embalse de San Juan fue diseñado para abastecer de agua y generar energía eléctrica para la zona suroeste de la Comunidad de Madrid. La presa es de tipo gravedad y presenta una altura máxima de 78 metros. Su construcción permitió la creación de un cuerpo de agua de 650 hectáreas de superficie, distribuidas a lo largo de un estrecho valle en las inmediaciones del puerto de San Juan.
@@ -243,7 +243,7 @@ export const detallesEmbalses = {
     dbId: 14,
     nombre: 'Embalse de Picadas',
     rios: 'Río Alberche', 
-    capacidadMaxima: 38,
+    capacidadMaxima: 15,
     ubicacion: 'San Martín de Valdeiglesias, Madrid',
     uso: 'Abastecimiento, Riego, Electricidad, Pesca, Navegación',
     descripcion: `El embalse de Picadas es una destacada infraestructura hidráulica ubicada en el suroeste de la Comunidad de Madrid, en las primeras estribaciones de la Sierra de Gredos. Construido en 1952 sobre el cauce del río Alberche, este embalse forma parte de un complejo hidráulico junto con el embalse de San Juan, siendo gestionado por la Confederación Hidrográfica del Tajo.
@@ -253,6 +253,7 @@ export const detallesEmbalses = {
     idAPI: 'picadas'
   }
 }
+
 
 // Componente principal de detalle del embalse seleccionado
 export default function EmbalseDetalle(){
