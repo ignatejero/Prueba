@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-// Definir el modelo de Embalse
+// Definimos el modelo de Embalse
 const Embalse = sequelize.define('embalses', {
   nombre: {
     type: DataTypes.STRING,
@@ -20,7 +20,7 @@ const Embalse = sequelize.define('embalses', {
     allowNull: false 
   }
 }, {
-  tableName: 'embalses',  // Asegúrate de que coincide con tu base de datos
+  tableName: 'embalses',  // ponemos la tabla embalses de la base de datos
   timestamps: false  
 });
 

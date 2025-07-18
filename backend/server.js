@@ -10,16 +10,16 @@ const ResumenEmbalses        = require('./models/ResumenEmbalses');
 const HistorialEmbalses      = require('./models/HistorialEmbalses');
 const HistorialResumenEmbalses = require('./models/HistorialResumenEmbalses');
 
-/*const { Pool } = require('pg');
+const { Pool } = require('pg');
 const pool = new Pool({
   user:     'postgres',
   host:     'localhost',
   database: 'postgres',
   password: 'admin',
   port:     5432,
-});*/
+});
 
-const { Pool } = require('pg');
+/*const { Pool } = require('pg');
 const pool = new Pool({
    user: process.env.DB_USER,         
    host: process.env.DB_HOST,         
@@ -29,7 +29,7 @@ const pool = new Pool({
    ssl: {
     rejectUnauthorized: false
    }
-});
+});*/
 
 
 app.use(cors());
@@ -93,7 +93,7 @@ app.get('/embalses', async (req, res) => {
   }
 });
 
-// Obtener embalse por ID
+// Obtenemos un embalse por ID
 app.get('/embalses/:id', async (req, res) => {
   const { id } = req.params;
   try {
@@ -107,7 +107,7 @@ app.get('/embalses/:id', async (req, res) => {
   }
 });
 
-// Obtener resumen de embalses
+// Obtenemos el resumen de embalses
 app.get('/resumenembalses', async (req, res) => {
   try {
     const resumen = await ResumenEmbalses.findAll();
@@ -221,8 +221,7 @@ app.get('/embalses/:id/mapa', async (req, res) => {
   }
 });
 
-// —————— NUEVA RUTA: Listar alertas ——————
-// Listar últimas 50 alertas
+// Se listan las últimas 50 alertas
 app.get('/alertas', async (req, res) => {
   try {
     const { rows } = await pool.query(`
@@ -245,5 +244,4 @@ app.get('/alertas', async (req, res) => {
   }
 });
 
-// ——————————————————————————————
 

@@ -45,6 +45,7 @@ const embalses_porcentaje = {
 
 let enEjecucion = false;
 
+// Función principal que actualiza los datos de los embalses
 async function actualizarEmbalses() {
   console.time("Tiempo de ejecución");
 
@@ -71,11 +72,14 @@ async function actualizarEmbalses() {
         embalsesProcesados++;
       }
 
+      // Buscamos el embalse en la base de datos
       const embalseEnDb = await Embalse.findOne({ where: { nombre: nombreEmbalse } });
+      // Si existe, actualizamos sus datos actuales
       if (embalseEnDb) {
         await embalseEnDb.update({ capacidad, volumen_porcentual });
         console.log(`✅ Embalse ${nombreEmbalse} actualizado.`);
 
+        // Registramos en el historial
         await HistorialEmbalses.create({
           nombre: nombreEmbalse,
           capacidad,
@@ -95,11 +99,12 @@ async function actualizarEmbalses() {
     return;
   }
 
+  // se calcula el porcentaje total de llenado
   const PorcentajeTotal = (CapacidadTotal / capacidadMaxima) * 100;
-
   console.log(`📊 Volumen total procesado: ${CapacidadTotal.toFixed(2)} hm³`);
   console.log(`📊 Porcentaje total de llenado: ${PorcentajeTotal.toFixed(2)}%`);
 
+  // se actualiza el resumen general en la base de datos
   const resumenEnDb = await ResumenEmbalses.findOne({ where: { id: 1 } });
   if (resumenEnDb) {
     await resumenEnDb.update({ CapacidadTotal, PorcentajeTotal });

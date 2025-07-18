@@ -22,17 +22,17 @@ const ResumenEmbalses = () => {
   // Función para cargar todos los datos
   const fetchDatos = () => {
     // Resumen general actual
-    fetch('https://octopus-app-p7ahd.ondigitalocean.app/resumenembalses')
+    fetch('http://localhost:5000/resumenembalses')
       .then(r => r.json())
       .then(data => setResumen(data[0]))
 
     // Histórico general de porcentajes
-    fetch('https://octopus-app-p7ahd.ondigitalocean.app/historialresumenembalses')
+    fetch('http://localhost:5000/historialresumenembalses')
       .then(r => r.json())
       .then(setHistorial)
 
     // Histórico detallado por embalse
-    fetch('https://octopus-app-p7ahd.ondigitalocean.app/historialembalses')
+    fetch('https://localhost:5000/historialembalses')
       .then(r => r.json())
       .then(setHistorialEmbalses)
   }

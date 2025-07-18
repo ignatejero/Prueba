@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
+// Definimos el modelo de HistorialEmbalses
 const HistorialEmbalses = sequelize.define('historialembalses', {
     id: {
         type: DataTypes.INTEGER,

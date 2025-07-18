@@ -6,23 +6,12 @@ const sequelize   = require('../config/database');
 const { Pool }    = require("pg");
 const TelegramBot = require("node-telegram-bot-api");
 
-/*const pool = new Pool({
+const pool = new Pool({
   user:     'postgres',
   host:     'localhost',
   database: 'postgres',
   password: 'admin',
   port:     5432,
-});*/
-
-const pool = new Pool({
-  user:     process.env.DB_USER,    // ej. 'doadmin'
-  host:     process.env.DB_HOST,    // ej. 'db-postgresql-nyc3-12345-do-user-678901-0.db.ondigitalocean.com'
-  database: process.env.DB_NAME,    // ej. 'defaultdb'
-  password: process.env.DB_PASSWORD,    // la contraseña que creaste en DigitalOcean
-  port:     parseInt(process.env.DB_PORT, 10),  // ej. 25060
-  ssl: {
-    rejectUnauthorized: false        // Obliga a usar TLS/SSL y acepta el certificado autofirmado de DigitalOcean
-  }
 });
 
 const NIVEL_CRITICO_EMBALSE  = 30;
@@ -32,7 +21,7 @@ const chatId                 = process.env.TELEGRAM_CHAT_ID;
 
 const bot = new TelegramBot(botToken, { polling: true });
 
-// Función para enviar alerta de un embalse individual
+// Funcion para enviar alerta de un embalse individual
 const enviarAlertaTelegramEmbalse = async (embalse) => {
   const mensaje = `⚠️⚠️ *Alerta capacidad de Embalses* ⚠️⚠️\n\n` +
                   `🚨🚨URGENTE🚨🚨\n\n` +
@@ -203,7 +192,7 @@ bot.onText(/\/resumenembalses/, async (msg) => {
   }
 });
 
-// Iniciar verificaciones cada 10 minutos
+// ejecutar verificaciones cada 10 minutos
 setInterval(() => {
   verificarEmbalse();
   verificarEmbalses();

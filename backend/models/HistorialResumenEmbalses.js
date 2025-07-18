@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
+// Definimos el modelo de HistorialResumenEmbalses
 const HistorialResumenEmbalses = sequelize.define('historialresumenembalses', {
     CapacidadTotal: {
         type: DataTypes.FLOAT,
