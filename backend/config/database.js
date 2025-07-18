@@ -12,7 +12,7 @@ require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') }
 
 module.exports = sequelize;
 
- const { Sequelize } = require('sequelize');
+const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
 const isUsingSSL = process.env.DB_HOST !== 'localhost' && process.env.DB_HOST !== '127.0.0.1';
