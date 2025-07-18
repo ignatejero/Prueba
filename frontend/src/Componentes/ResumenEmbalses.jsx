@@ -22,17 +22,17 @@ const ResumenEmbalses = () => {
   // Función para cargar todos los datos
   const fetchDatos = () => {
     // Resumen general actual
-    fetch('https://127.0.0.1:5000/resumenembalses')
+    fetch('http://127.0.0.1:5000/resumenembalses')
       .then(r => r.json())
       .then(data => setResumen(data[0]))
 
     // Histórico general de porcentajes
-    fetch('https://127.0.0.1:5000/historialresumenembalses')
+    fetch('http://127.0.0.1:5000/historialresumenembalses')
       .then(r => r.json())
       .then(setHistorial)
 
     // Histórico detallado por embalse
-    fetch('https://127.0.0.1:5000/historialembalses')
+    fetch('http://127.0.0.1:5000/historialembalses')
       .then(r => r.json())
       .then(setHistorialEmbalses)
   }
