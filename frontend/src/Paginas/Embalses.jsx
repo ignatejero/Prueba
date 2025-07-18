@@ -43,7 +43,7 @@ export default function Embalses() {
 
   useEffect(() => {
     // Hacemos fetch a la API desplgada en digitalocean
-    fetch('https://octopus-app-p7ahd.ondigitalocean.app/embalses')
+    fetch('http://127.0.0.1:5000/embalses')
       .then(res => res.json())
       .then(data => {
         // Mezclamos los datos locales con el volumen actual desde la API
