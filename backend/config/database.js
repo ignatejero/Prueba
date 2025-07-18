@@ -8,9 +8,9 @@ require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') }
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-});*/
+});
 
-module.exports = sequelize;
+module.exports = sequelize;*/
 
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
