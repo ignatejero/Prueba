@@ -32,7 +32,7 @@ const ResumenEmbalses = () => {
       .then(setHistorial)
 
     // Histórico detallado por embalse
-    fetch('https://localhost:5000/historialembalses')
+    fetch('http://localhost:5000/historialembalses')
       .then(r => r.json())
       .then(setHistorialEmbalses)
   }
