@@ -154,7 +154,7 @@ const Mapa = () => {
 
       try {
         // Pedimos los datos de embalses desde la API
-        const res = await fetch('https://octopus-app-p7ahd.ondigitalocean.app/embalses');
+        const res = await fetch('http://localhost:5000/embalses');
         const embalses = await res.json();
 
         // Para cada embalse, ponemos un marcador en el mapa
