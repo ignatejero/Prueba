@@ -19,9 +19,9 @@ export default function Alertas() {
   // Obtenemos datos de alertas, resumen de todos los embalses y estado de cada embalses desde el backend desplegado
   useEffect(() => {
     Promise.all([
-      fetch('http://127.0.0.1:5000/alertas').then(res => res.json()),
-      fetch('http://127.0.0.1:5000/embalses').then(res => res.json()),
-      fetch('http://127.0.0.1:5000/resumenembalses').then(res => res.json())
+      fetch('http://localhost:5000/alertas').then(res => res.json()),
+      fetch('http://localhost:5000/embalses').then(res => res.json()),
+      fetch('http://localhost:5000/resumenembalses').then(res => res.json())
     ])
       .then(([alertasData, embalsesData, resumenData]) => {
         setAlertas(alertasData);                      // Guarda alertas individuales

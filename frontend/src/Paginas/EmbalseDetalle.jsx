@@ -273,7 +273,7 @@ export default function EmbalseDetalle(){
   // Hacemos la petición para cargar los datos actuales del embalse
   useEffect(() => {
     if (!embalse) return
-    fetch(`http://127.0.0.1:5000/embalses/${embalse.dbId}`)  
+    fetch(`http://localhost:5000/embalses/${embalse.dbId}`)  
       .then(r => r.json())
       .then(d =>
         setDatosEmbalse({
@@ -286,7 +286,7 @@ export default function EmbalseDetalle(){
   // Obtenemos el clima actual y predicción para el embalse
   useEffect(() => {
     if (!embalse) return
-    fetch(`http://127.0.0.1:5000/embalses/tiempo/${embalse.dbId}`)
+    fetch(`http://localhost:5000/embalses/tiempo/${embalse.dbId}`)
       .then(r => r.json())
       .then(d => {
         setClimaActual(d.climaActual)
@@ -297,7 +297,7 @@ export default function EmbalseDetalle(){
   // Conectamos con el backend para acceder al mapa meteorológico (Windy)
   useEffect(() => {
     if (!embalse) return
-    fetch(`http://127.0.0.1:5000/embalses/${embalse.dbId}/mapa`)
+    fetch(`http://localhost:5000/embalses/${embalse.dbId}/mapa`)
       .then(r => r.json())
       .then(({ windyUrl }) => setMapaUrl(windyUrl))
   }, [embalse])
@@ -305,7 +305,7 @@ export default function EmbalseDetalle(){
   // Cargamos el historial de volumen del embalse y filtramos por nombre (slug)
   useEffect(() => {
     if (!embalse) return
-    fetch('http://127.0.0.1:5000/historialembalses')
+    fetch('http://localhost:5000/historialembalses')
       .then(r => r.json())
       .then(data => {
         const filtrado = data.filter(item => {
