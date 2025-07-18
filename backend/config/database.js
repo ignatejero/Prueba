@@ -1,4 +1,4 @@
-const { Sequelize } = require('sequelize');
+/*const { Sequelize } = require('sequelize');
 require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') });
 
   const sequelize = new Sequelize({
@@ -10,9 +10,10 @@ require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') }
   database: process.env.DB_NAME,
 });
 
-module.exports = sequelize;
+module.exports = sequelize;*/
 
-/*const { Sequelize } = require('sequelize');
+
+const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
 const isUsingSSL = process.env.DB_HOST !== 'localhost' && process.env.DB_HOST !== '127.0.0.1';
@@ -36,4 +37,4 @@ const sequelize = new Sequelize({
   logging: false
 });
 
-module.exports = sequelize;*/
+module.exports = sequelize;
