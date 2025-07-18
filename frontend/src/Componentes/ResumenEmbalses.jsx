@@ -23,18 +23,15 @@ const ResumenEmbalses = () => {
   const fetchDatos = () => {
     // Resumen general actual
     fetch('http://127.0.0.1:5000/resumenembalses')
-      .then(r => r.json())
-      .then(data => setResumen(data[0]))
+      
 
     // Histórico general de porcentajes
     fetch('http://127.0.0.1:5000/historialresumenembalses')
-      .then(r => r.json())
-      .then(setHistorial)
+      
 
     // Histórico detallado por embalse
     fetch('http://127.0.0.1:5000/historialembalses')
-      .then(r => r.json())
-      .then(setHistorialEmbalses)
+    
   }
 
   // Ejecutamos la carga inicial y recargamos cada minuto
